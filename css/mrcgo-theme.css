@@ -42,8 +42,87 @@ body {
 }
 
 .top-icons-container {
-  padding-right: 25px;
+  padding-right: 45px;
   float: right;
+}
+
+#location-selector {
+  display: block;
+  float: left;
+  margin-right: 15px;
+}
+
+#location-selector button {
+  border-radius: 0px;
+  border: 0px;
+}
+
+#location-selector button,
+#location-selector button:active,
+#location-selector button:hover,
+#location-selector button:focus {
+  background-image: url(../images/icons/us.png);
+  background-repeat: no-repeat;
+  background-position: left;
+}
+
+#location-selector .header {
+  font-size: 12px;
+  color: #000;
+  text-align: left;
+  font-weight: 900;
+  padding: 10px 15px;
+}
+
+#location-selector .header button,
+#location-selector .header button:active,
+#location-selector .header button:hover,
+#location-selector .header button:focus {
+  background-image: none;
+  background-color: transparent;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  color: #999;
+}
+
+#location-selector a {
+  font-size: 11px;
+  color: #000;
+  text-align: center;
+  width: 50%;
+  display: block;
+  float: left;
+  margin-bottom: 15px;
+}
+
+#location-selector a img {
+  display: block;
+  margin-top: 5px;
+  margin-right: auto;
+  margin-left: auto;
+  box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
+}
+
+#location-selector .dropdown-menu {
+  left: -126px;
+  top: 35px;
+  width: 290px;
+  padding: 15px 0px;
+}
+
+#location-selector .dropdown-menu:before {
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  transform: rotate(45deg);
+  content: '';
+  background-color: inherit;
+  left: 50%;
+  top: -0.9rem;
+  margin-left: -0.5rem;
+  border-top: 1px solid #999;
+  border-left: 1px solid #999;
 }
 
 .flag-english-us-icon {
@@ -204,6 +283,97 @@ body {
 
 /* END LOGIN MODAL STYLES */
 
+/* START FOOTER STYLES */
+#mrcgo-footer {
+  min-height: 400px;
+  background-color: rgb(51, 55, 64);
+  color: #fff;
+  padding: 3em 2em;
+  font-size: 14px;
+}
+
+#mrcgo-footer h2 {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-top: 0px;
+}
+
+#mrcgo-footer #footer-logo {
+  width: 100%;
+  max-width: 200px;
+}
+
+#mrcgo-footer #slogan {
+  font-style: italic;
+}
+
+#mrcgo-footer #address span {
+  display: block;
+}
+
+#mrcgo-footer #support-links {
+  padding-left: 0px;
+  line-height: 2em;
+}
+
+#mrcgo-footer #support-links li {
+  list-style: none;
+}
+
+#mrcgo-footer #support-links li a {
+  color: #AFD2DF;
+}
+
+#mrcgo-footer .social-icons {
+  padding-left: 30px;
+}
+
+#mrcgo-footer .social-icons li {
+  list-style: none;
+  padding-bottom: 10px;
+}
+
+#mrcgo-footer .social-icons li a img {
+  width: 35px;
+  height: 35px;
+  display: block;
+}
+
+#mrcgo-footer .change-location-section {
+  padding-left: 0px;
+  display: inline-block;
+}
+
+#mrcgo-footer .change-location-section li {
+  list-style: none;
+  padding-right: 15px;
+  padding-bottom: 15px;
+
+}
+
+#mrcgo-footer .change-location-section li a img {
+  width: 100%;
+  max-width: 40px;
+  height: auto;
+  box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
+}
+
+#mrcgo-footer .copyright-info {
+  display: block;
+  float: left;
+  width: 100%;
+  text-align: center;
+  padding-top: 50px;
+  font-size: 10px;
+}
+
+#mrcgo-footer .copyright-info a {
+  color: #AFD2DF;
+}
+
+/* END FOOTER STYLES */
+
 /******** START MOBILE CSS MEDIA QUERIES ********/
 @media (max-width: 767px) {
   body {
@@ -232,6 +402,29 @@ body {
     margin-right: 0px;
     width: 90%;
   }
+  #mrcgo-footer .social-icons {
+    padding-left: 0px;
+  }
+
+  #mrcgo-footer .social-icons li {
+    display: inline-block;
+  }
+
+  #mrcgo-footer .social-icons li a img {
+
+    float: left;
+  }
+  #mrcgo-footer .col-xs-6
+  {
+    margin-bottom: 20px;
+    padding-top: 20px;
+  }
+  #mrcgo-footer .copyright-info
+  {
+    padding-top: 30px;
+    border-top: 1px solid #666;
+  }
+
 }
 
 @media (min-width: 768px) {
@@ -242,6 +435,42 @@ body {
   .mobile-view-items {
     display: none;
   }
+  #mrcgo-footer .change-location-section li
+  {
+    padding-right: 5px;
+  }
 
 }
+
+@media (max-width: 426px) {
+
+  #mrcgo-footer .col-sm-3 {
+    width: 100%;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #666;
+    padding-bottom: 15px;
+  }
+
+  #mrcgo-footer .social-icons {
+    padding-left: 0px;
+  }
+
+  #mrcgo-footer .social-icons li {
+    display: inline-block;
+  }
+
+  #mrcgo-footer .social-icons li a img {
+
+    float: left;
+  }
+
+  #mrcgo-footer .copyright-info {
+
+    padding-top: 0px;
+    border: 0px;
+
+  }
+
+}
+
 /******** END MOBILE CSS MEDIA QUERIES ********/
