@@ -288,7 +288,7 @@ body {
   min-height: 400px;
   background-color: rgb(51, 55, 64);
   color: #fff;
-  padding: 3em 2em;
+  padding: 5em 2em;
   font-size: 14px;
 }
 
@@ -301,7 +301,7 @@ body {
 
 #mrcgo-footer #footer-logo {
   width: 100%;
-  max-width: 200px;
+  max-width: 180px;
 }
 
 #mrcgo-footer #slogan {
@@ -349,7 +349,7 @@ body {
   list-style: none;
   padding-right: 15px;
   padding-bottom: 15px;
-
+  float: left;
 }
 
 #mrcgo-footer .change-location-section li a img {
@@ -359,17 +359,22 @@ body {
   box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
 }
 
+#mrcgo-footer .last-col {
+  padding-right: 0px
+}
+
 #mrcgo-footer .copyright-info {
   display: block;
   float: left;
   width: 100%;
   text-align: center;
   padding-top: 50px;
-  font-size: 10px;
+  font-size: 12px;
 }
 
 #mrcgo-footer .copyright-info a {
   color: #AFD2DF;
+  font-size: 10px;
 }
 
 /* END FOOTER STYLES */
@@ -392,16 +397,17 @@ body {
   .top-icons-container {
     float: left;
     width: 100%;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 
   .request-quote-nav-cta {
     margin-top: 0px;
-    margin-left: 15px;
+    margin-bottom: 15px;
     margin-right: 0px;
-    width: 90%;
+    width: 100%;
   }
+
   #mrcgo-footer .social-icons {
     padding-left: 0px;
   }
@@ -414,15 +420,16 @@ body {
 
     float: left;
   }
-  #mrcgo-footer .col-xs-6
-  {
+
+  #mrcgo-footer .col-xs-6 {
     margin-bottom: 20px;
     padding-top: 20px;
   }
-  #mrcgo-footer .copyright-info
-  {
+
+  #mrcgo-footer .copyright-info {
     padding-top: 30px;
     border-top: 1px solid #666;
+    font-size: 10px;
   }
 
 }
@@ -435,14 +442,27 @@ body {
   .mobile-view-items {
     display: none;
   }
-  #mrcgo-footer .change-location-section li
-  {
+
+  #mrcgo-footer .change-location-section li {
     padding-right: 5px;
   }
 
 }
 
 @media (max-width: 426px) {
+
+  .container-fluid>.navbar-header {
+    border-bottom: 1px solid #AAAAAA;
+  }
+
+  .request-quote-mobile {
+    margin: 0px;
+  }
+
+  #mrcgo-footer {
+
+    padding: 3em 2em;
+  }
 
   #mrcgo-footer .col-sm-3 {
     width: 100%;
