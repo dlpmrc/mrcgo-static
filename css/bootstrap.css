@@ -4460,11 +4460,11 @@ tbody.collapse.in {
 
 .dropdown-menu>li>a {
   display: block;
-  padding: 3px 20px;
+  padding: 5px 20px;
   clear: both;
   font-weight: 400;
   line-height: 1.42857143;
-  color: #333333;
+  color: #2D5F71;
   white-space: nowrap;
 }
 
@@ -5645,7 +5645,7 @@ select[multiple].input-group-sm>.input-group-btn>.btn {
 
 @media (max-width: 767px) {
   .navbar-default .navbar-nav .open .dropdown-menu>li>a {
-    color: #777;
+    color: #2D5F71;
   }
 
   .navbar-default .navbar-nav .open .dropdown-menu>li>a:hover,

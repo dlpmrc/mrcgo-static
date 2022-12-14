@@ -421,6 +421,18 @@ body {
     float: left;
   }
 
+  .container-fluid>.navbar-header {
+    border-bottom: 1px solid #AAAAAA;
+  }
+
+  .request-quote-mobile {
+    margin: 0px;
+  }
+
+  .dropdown-menu li {
+    padding: 5px 0px;
+  }
+
   #mrcgo-footer .col-xs-6 {
     margin-bottom: 20px;
     padding-top: 20px;
@@ -450,14 +462,6 @@ body {
 }
 
 @media (max-width: 426px) {
-
-  .container-fluid>.navbar-header {
-    border-bottom: 1px solid #AAAAAA;
-  }
-
-  .request-quote-mobile {
-    margin: 0px;
-  }
 
   #mrcgo-footer {
 
