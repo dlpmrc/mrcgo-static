@@ -4,7 +4,7 @@
 
 body {
   min-height: 2000px;
-  padding-top: 160px;
+  padding-top: 130px;
 }
 
 #mrcgo-nav-container {
@@ -283,6 +283,69 @@ body {
 
 /* END LOGIN MODAL STYLES */
 
+/* START BANNER/VIDEO STYLES */
+#mrcgo-banner {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+  background-color: #fff;
+  margin-bottom: 20px;
+}
+
+#mrcgo-banner #message-container {
+  position: absolute;
+  max-width: 700px;
+  height: auto;
+  z-index: 1000;
+  color: #fff;
+  top: 75px;
+  left: 50px;
+}
+
+#mrcgo-banner #headline {
+  font-size: 34px;
+  text-shadow: 2px 2px 8px rgb(0 0 0 / 75%);
+  font-weight: 900;
+  padding-bottom: 15px;
+}
+
+#mrcgo-banner #headline:after {
+  content: "";
+  background-color: #CD2028;
+  display: block;
+  max-width: 155px;
+  height: 7px;
+}
+
+#mrcgo-banner #sub-text {
+  font-size: 16px;
+  text-shadow: 2px 2px 8px rgb(0 0 0 / 75%);
+}
+
+#video-player-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 999;
+  opacity: 0.5;
+}
+
+video {
+  width: 100% !important;
+  min-width: 1200px;
+  height: auto !important;
+  background-color: #fff;
+  position: absolute;
+  top: -20%;
+}
+
+/* END BANNER/VIDEO STYLES */
+
 /* START FOOTER STYLES */
 #mrcgo-footer {
   min-height: 400px;
@@ -360,7 +423,8 @@ body {
 }
 
 #mrcgo-footer .last-col {
-  padding-right: 0px
+  padding-right: 0px;
+  padding-left: 0px;
 }
 
 #mrcgo-footer .copyright-info {
@@ -384,7 +448,7 @@ body {
 /******** START MOBILE CSS MEDIA QUERIES ********/
 @media (max-width: 767px) {
   body {
-    padding-top: 70px;
+    padding-top: 50px;
   }
 
   .desktop-bar {
@@ -435,6 +499,7 @@ body {
     padding: 5px 0px;
   }
 
+
   #mrcgo-footer .col-xs-6 {
     margin-bottom: 20px;
     padding-top: 20px;
@@ -448,6 +513,36 @@ body {
 
 }
 
+@media (max-width: 768px) {
+
+  /* MEDIA QUERY TO FIX BANNER ISSUE */
+  #mrcgo-banner {
+    height: 275px;
+  }
+
+  #mrcgo-banner #message-container {
+
+    max-width: 430px;
+
+  }
+
+  #mrcgo-banner #headline {
+    font-size: 24px;
+
+  }
+
+  #mrcgo-banner #sub-text {
+    font-size: 14px;
+  }
+
+  video {
+    width: 750px !important;
+    left: -30%;
+    top: -30%;
+  }
+
+}
+
 @media (min-width: 768px) {
   .mrcgo-logo-mobile {
     display: none;
@@ -457,13 +552,15 @@ body {
     display: none;
   }
 
-  #mrcgo-footer .change-location-section li {
-    padding-right: 5px;
-  }
-
 }
 
 @media (max-width: 426px) {
+
+  #mrcgo-banner #message-container {
+    max-width: 310px;
+    top: 20%;
+    left: 10%;
+  }
 
   #mrcgo-footer {
 
@@ -475,6 +572,11 @@ body {
     margin-bottom: 30px;
     border-bottom: 1px solid #666;
     padding-bottom: 15px;
+  }
+
+  #mrcgo-footer .last-col {
+
+    padding-left: 15px;
   }
 
   #mrcgo-footer .social-icons {
@@ -490,6 +592,11 @@ body {
     float: left;
   }
 
+  video {
+    left: -60%;
+    top: -30%;
+  }
+
   #mrcgo-footer .copyright-info {
 
     padding-top: 0px;
@@ -497,6 +604,13 @@ body {
 
   }
 
+}
+
+@media (max-width: 320px) {
+
+  #mrcgo-banner #message-container {
+    max-width: 250px;
+  }
 }
 
 /******** END MOBILE CSS MEDIA QUERIES ********/
