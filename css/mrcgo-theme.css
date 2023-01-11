@@ -11,6 +11,55 @@ body {
   box-shadow: 0 4px 2px -2px grey;
 }
 
+/* START CSS FOR SUB MENU DROPDOWN */
+.megasubmenu {
+  padding: 1rem;
+}
+
+.dropdown-menu li {
+  position: relative;
+}
+
+.dropdown-menu .dropdown-submenu {
+  display: none;
+  position: absolute;
+  left: 100%;
+  top: -7px;
+  width: 560px;
+}
+
+.dropdown-menu .dropdown-submenu-left {
+  right: 100%;
+  left: auto;
+}
+
+.dropdown-menu .dropdown-submenu li {
+  float: left;
+  min-width: 180px;
+}
+
+.dropdown-menu .dropdown-submenu li a {
+  width: 100%;
+  display: block;
+  padding: 5px 10px;
+}
+
+.dropdown-menu>li:hover>.dropdown-submenu {
+  display: block;
+}
+
+ul.sub-menu-list {
+  display: inline-block;
+  width: 180px;
+  margin: 0px;
+  padding: 0px;
+}
+
+ul.sub-menu-list li {
+  list-style-type: none;
+}
+
+/* END CSS FOR SUB MENU DROPDOWN */
 .desktop-bar {
   width: 100%;
   background-color: #fff;
@@ -169,17 +218,6 @@ body {
   margin-right: 25px;
 }
 
-.banner-image {
-  background-image: url(../images/banner.png);
-  background-repeat: no-repeat;
-  background-position: left;
-  width: 100%;
-  display: block;
-  float: left;
-  height: 300px;
-  background-size: 100%;
-}
-
 /* START CUSTOM SPACING OPTIONS */
 .padding-top-5 {
   padding-top: 5px;
@@ -335,7 +373,7 @@ body {
   opacity: 0.5;
 }
 
-video {
+#mrcgo-banner video {
   width: 100% !important;
   min-width: 1200px;
   height: auto !important;
@@ -345,6 +383,173 @@ video {
 }
 
 /* END BANNER/VIDEO STYLES */
+
+/* START PRODUCTS/SECTORS HOME SECTION */
+#products-and-sectors-container .thumbnail {
+  border-radius: 0px;
+  box-shadow: 2px 2px 8px rgb(0 0 0 / 25%);
+  overflow: hidden;
+}
+
+.thumbnail-label {
+  text-align: center;
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  color: #635F60;
+  margin-left: -5px;
+  margin-right: -5px;
+  background-color: #EBEBEB;
+  min-height: 60px;
+  padding: 5px 10px;
+  margin-bottom: -5px;
+  margin-top: 15px;
+}
+
+.thumbnail-label.single {
+  line-height: 3em;
+  /* middle display for single labels */
+}
+
+.headline-content-area {
+  font-size: 24px;
+  font-weight: 900;
+  padding-bottom: 15px;
+  text-align: center;
+  color: #635F60;
+  margin-top: 35px;
+  margin-bottom: 25px;
+}
+
+.headline-content-area:after {
+  content: "";
+  background-color: #CD2028;
+  display: block;
+  max-width: 125px;
+  height: 7px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+}
+
+.thumbnail-label-sectors {
+  text-align: center;
+  text-shadow: 2px 2px 8px rgb(0 0 0 / 75%);
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  color: #FFF;
+  min-height: 60px;
+  margin-bottom: -5px;
+  position: absolute;
+  width: auto;
+  top: 10px;
+  z-index: 1000;
+  left: 30px;
+  right: 30px;
+}
+
+.thumbnail-label-sectors.single {
+  line-height: 3em;
+  /* middle display for single labels */
+}
+
+.thumbnail-sector-overlay {
+  position: absolute;
+  top: 5px;
+  left: 20px;
+  right: 20px;
+  width: auto;
+  height: 60px;
+  background-color: #000;
+  z-index: 999;
+  opacity: 0.5;
+  display: block;
+}
+
+/* END PRODUCTS/SECTORS HOME SECTION */
+
+/* START FOOTER BANNER/VIDEO STYLES */
+#footer-video-container {
+  position: relative;
+  color: #fff;
+  overflow: hidden;
+  height: 600px;
+  margin-top: 50px;
+}
+
+#footer-video-container #footer-message-container {
+  position: absolute;
+  height: auto;
+  z-index: 1000;
+  color: #fff;
+  top: 75px;
+  width: 100%;
+  text-align: center;
+}
+
+#footer-video-message {
+  font-size: 34px;
+  text-shadow: 2px 2px 8px rgb(0 0 0 / 75%);
+  font-weight: 900;
+  padding-bottom: 15px;
+  text-transform: uppercase;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#footer-video-message:after {
+  content: "";
+  background-color: #CD2028;
+  display: block;
+  max-width: 155px;
+  height: 7px;
+  margin-left: 220px;
+}
+
+button#play-footer-video-modal {
+  background-color: transparent;
+  border: 0px;
+  font-size: 66px;
+  text-shadow: 2px 2px 8px rgb(0 0 0 / 75%);
+  margin-top: 10px;
+  opacity: 0.6;
+  color: #fff;
+}
+
+button#play-footer-video-modal:hover {
+  opacity: 1.0;
+}
+
+button#play-footer-video-modal:focus {
+  border: 0px;
+  outline: transparent;
+}
+
+#footer-background-image {
+  width: 100%;
+  height: auto;
+  ;
+}
+
+#footer-image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 999;
+  opacity: 0.5;
+}
+
+#footerVideoModal video {
+  width: 100% !important;
+  height: auto !important;
+}
+
+/* END FOOTER BANNER/VIDEO STYLES */
 
 /* START FOOTER STYLES */
 #mrcgo-footer {
@@ -446,6 +651,15 @@ video {
 /* END FOOTER STYLES */
 
 /******** START MOBILE CSS MEDIA QUERIES ********/
+
+@media (max-width: 1024px) {
+
+  #footer-video-message {
+    font-size: 28px;
+  }
+
+}
+
 @media (max-width: 767px) {
   body {
     padding-top: 50px;
@@ -515,30 +729,85 @@ video {
 
 @media (max-width: 768px) {
 
-  /* MEDIA QUERY TO FIX BANNER ISSUE */
+  /* CSS TO FIX BANNER ISSUE */
   #mrcgo-banner {
     height: 275px;
   }
 
   #mrcgo-banner #message-container {
-
     max-width: 430px;
-
   }
 
   #mrcgo-banner #headline {
     font-size: 24px;
-
   }
 
   #mrcgo-banner #sub-text {
     font-size: 14px;
   }
 
-  video {
+  #mrcgo-banner video {
     width: 750px !important;
     left: -30%;
     top: -30%;
+  }
+
+  /* START CONTENT AREA STYLES */
+  .headline-content-area {
+    font-size: 22px;
+
+  }
+
+  .headline-content-area:after {
+    max-width: 125px;
+  }
+
+  .thumbnail-label {
+    font-size: 12px;
+    padding-top: 10px;
+  }
+
+  .thumbnail-label.single {
+    line-height: 1.5em;
+    padding-top: 15px;
+  }
+
+  .thumbnail-label-sectors {
+    font-size: 12px;
+    left: 20px;
+    right: 25px;
+    padding-top: 5px;
+  }
+
+  .thumbnail-label-sectors.single {
+    line-height: 1.5em;
+    padding-top: 15px;
+  }
+
+  /* END CONTENT AREA STYLES */
+
+  #footer-video-container {
+    height: 340px;
+  }
+
+  #footer-video-container #footer-message-container {
+    top: 4em;
+  }
+
+  #footer-video-message {
+    font-size: 18px;
+    max-width: 375px;
+    padding-bottom: 0px;
+  }
+
+  #footer-video-message:after {
+    max-width: 95px;
+    margin-left: 140px;
+
+  }
+
+  button#play-footer-video-modal {
+    font-size: 46px;
   }
 
 }
@@ -556,10 +825,86 @@ video {
 
 @media (max-width: 426px) {
 
+  /* Overlay for mobile menu */
+  #navbar:after {
+    display: block;
+    background-color: #000;
+    position: absolute;
+    bottom: -190px;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    opacity: 0.6;
+    left: 0px;
+  }
+
   #mrcgo-banner #message-container {
     max-width: 310px;
     top: 20%;
     left: 10%;
+  }
+
+  #mrcgo-banner video {
+    left: -60%;
+    top: -30%;
+  }
+
+  /* START CONTENT AREA STYLES */
+  .headline-content-area {
+    font-size: 20px;
+    margin-top: 15px;
+  }
+
+  .headline-content-area:after {
+    max-width: 105px;
+  }
+
+  .thumbnail-label {
+    font-size: 12px;
+    padding-top: 10px;
+  }
+
+  .thumbnail-label.single {
+    line-height: 1.5em;
+    padding-top: 20px;
+  }
+
+  .thumbnail-label-sectors {
+    font-size: 12px;
+    padding-top: 5px;
+    left: 20px;
+    right: 20px;
+  }
+
+  .thumbnail-label-sectors.single {
+    line-height: 1.5em;
+    padding-top: 15px;
+  }
+
+  /* END CONTENT AREA STYLES */
+
+  #footer-video-container {
+    height: 300px;
+  }
+
+  #footer-video-container #footer-message-container {
+    top: 2.5em;
+  }
+
+  #footer-video-message {
+    font-size: 16px;
+    max-width: 175px;
+  }
+
+  #footer-video-message:after {
+    max-width: 75px;
+    margin-left: 50px;
+
+  }
+
+  button#play-footer-video-modal {
+    font-size: 35px;
+    margin-top: 10px;
   }
 
   #mrcgo-footer {
@@ -592,11 +937,6 @@ video {
     float: left;
   }
 
-  video {
-    left: -60%;
-    top: -30%;
-  }
-
   #mrcgo-footer .copyright-info {
 
     padding-top: 0px;
@@ -606,10 +946,45 @@ video {
 
 }
 
+@media (max-width: 376px) {
+
+  /* START CONTENT AREA STYLES */
+  .thumbnail-label {
+    padding-top: 15px;
+  }
+
+  .thumbnail-label.single {
+    padding-top: 15px;
+  }
+
+  .thumbnail-label-sectors {
+    right: 23px;
+  }
+
+  /* END CONTENT AREA STYLES */
+}
+
+
+
 @media (max-width: 320px) {
 
   #mrcgo-banner #message-container {
     max-width: 250px;
+  }
+
+  /* START CONTENT AREA STYLES */
+  .thumbnail-label-sectors {
+    padding-top: 0px;
+  }
+
+  .thumbnail-label-sectors.single {
+    line-height: 1.3em;
+    padding-top: 14px;
+  }
+
+  /* END CONTENT AREA STYLES */
+  #footer-video-container {
+    height: 260px;
   }
 }
 
