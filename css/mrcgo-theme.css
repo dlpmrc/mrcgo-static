@@ -3,15 +3,19 @@
 }
 
 body {
-  min-height: 2000px;
   padding-top: 130px;
 }
-
+/* JUST FOR DEMO */
+body.logged-in .headline-content-area
+{
+  padding-top: 15px;
+}
 #mrcgo-nav-container {
   box-shadow: 0 4px 2px -2px grey;
 }
 
 /* START CSS FOR SUB MENU DROPDOWN */
+
 .megasubmenu {
   padding: 1rem;
 }
@@ -58,7 +62,101 @@ ul.sub-menu-list {
 ul.sub-menu-list li {
   list-style-type: none;
 }
+/* START CSS FOR LOGGED IN NAV ITEMS */
+#logged-in-nav .logged-in-customer {
+  display: block;
+  width: 100%;
+  float: right;
+}
+#logged-in-nav .top-icons-container
+{
+  padding-right: 0px;
+  padding-left: 5%;
+  float: right;
+}
+.customer-shopping-cart
+{
+  width: 50%;
+  float: left;
+  display: block;
+}
+.customer-shopping-cart a span
+{
+ color:#635F60;
+ display: block;
+ float: left;
+ width: 100%;
+}
+.customer-shopping-cart a span.bold
+{
+  font-weight: 600;
+}
+.customer-shopping-cart .shopping-cart-icon-logged-in
+{
+  width: 100%;
+  padding-left: 40px;
+  background-image: url(../images/icons/cart-icon.png);
+  background-repeat: no-repeat;
+  background-position: left;
+  height: 22px;
+  display: block;
+  float: left;
+  margin-right: 15px;
+  background-size: 29px;
+}
+.customer-information
+{
+  width: 50%;
+  float: left;
+  display: block;
+}
+.customer-information a span
+{
+  color: #635F60;
+  display: block;
+  float: left;
+  width: 100%;
+}
+.customer-information a span.bold
+{
+  font-weight: 600;
+}
+.customer-information .login-icon-logged-in
+{
+  width: 100%;
+  padding-left: 40px;
+  background-image: url(../images/icons/user-icon.png);
+  background-repeat: no-repeat;
+  background-position: left;
+  height: 22px;
+  display: block;
+  float: left;
+  margin-right: 15px;
+  background-size: 29px;
 
+  color: #666;
+  font-size: 14px;
+}
+.logout-icon
+{
+  width: 100%;
+  display: block;
+  padding-left: 40px;
+}
+.customer-branch
+{
+  width: 100%;
+  float: left;
+  display: block;
+}
+.customer-branch a span
+{
+  color: #635F60;
+  display: block;
+  font-weight: 600;
+  text-align: center;
+}
+/* END CSS FOR LOGGED IN NAV ITEMS */
 /* END CSS FOR SUB MENU DROPDOWN */
 .desktop-bar {
   width: 100%;
@@ -84,6 +182,118 @@ ul.sub-menu-list li {
   background-size: 90%;
   background-position: center;
 }
+
+.search-toggle {
+  position: relative;
+  float: right;
+  margin-right: 5px;
+  margin-bottom: 8px;
+  background-color: transparent;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+#top-search-icon-mobile {
+  color: #888;
+  background-color: transparent;
+}
+#top-search-icon-mobile.btn
+{
+  font-size: 18px;
+  text-align: center;
+  width: 40px;
+  padding: 5px 5px;
+  height: 35px;
+}
+#top-search-icon-mobile.btn:focus {
+  outline: 0;
+  background-color: #ddd;
+  border: 1px solid #ddd;
+}
+
+/* START SEARCH EXPAND/COLLAPSE */
+.search-container {
+  width: 100%;
+  top: 50px;
+  position: absolute;
+}
+.search-container div {
+  width:100%;
+}
+.search-container .search-header {
+  padding: 2px;
+  cursor: pointer;
+  font-weight: bold;
+  position: absolute;
+  right: 10px;
+  width: 42px;
+  height: 36px;
+  top: -45px;
+}
+.search-container .search-content {
+  display: none;
+  padding: 15px 15px;
+  position: relative;
+  float: left;
+  background-color: #ebebeb;
+  border-top: 1px solid #ccc;
+}
+.search-content:after
+{
+  content: "";
+  display: block;
+  background-color: #000;
+  position: absolute;
+  top: 0px;
+  z-index: -1;
+  height: 1500px;
+  width: 100%;
+  opacity: 0.5;
+  left: 0px;
+}
+.search-container input.form-control.mrcgo-search.ui-autocomplete-input
+{
+  height: 40px;
+}
+.search-container button#top-search-icon
+{
+  padding: 9px 12px;
+}
+/* END SEARCH EXPAND/COLLAPSE */
+
+/* START MOBILE MENU STYLES */
+#navbar.navbar-collapse.collapse.in ul.nav.navbar-nav
+{
+  margin: 0px -15px;
+}
+#navbar.navbar-collapse.collapse.in ul.nav.navbar-nav li.dropdown,
+#navbar.navbar-collapse.collapse.in ul.nav.navbar-nav li.nav-item.dropdown
+{
+  border-bottom: 1px solid #ccc;
+}
+#navbar.navbar-collapse.collapse.in ul.nav.navbar-nav li a.dropdown-toggle
+{
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+#navbar.navbar-collapse.collapse.in ul.nav.navbar-nav.navbar-right
+{
+  margin: 7.5px 0px;
+}
+#navbar.navbar-collapse.collapse.in .caret {
+  display: block;
+    width: 0;
+    height: 0;
+  margin-top: 6px;
+  border-top: 6px dashed;
+  border-top: 4px solid \9;
+  border-right: 6px solid transparent;
+  border-left: 6px solid transparent;
+  color: #828181;
+  float: right;
+  margin-right: 10px;
+}
+/* END MOBILE MENU STYLES */
 
 #top-search-icon {
   color: #fff;
@@ -218,6 +428,9 @@ ul.sub-menu-list li {
   margin-right: 25px;
 }
 
+
+
+
 /* START CUSTOM SPACING OPTIONS */
 .padding-top-5 {
   padding-top: 5px;
@@ -267,19 +480,24 @@ ul.sub-menu-list li {
   width: 100%;
   height: 45px;
   font-size: 16px;
-  font-weight: 900;
-  text-transform: uppercase;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 #loginModal .forgot-password-link {
-  margin-top: 10px;
-  margin-left: 20px;
-  float: left;
   display: block;
+  padding: 11px;
+  border: 1px solid #215263;
+  border-radius: 5px;
+  width: 95%;
+  text-align: center;
+  margin-left: 5%;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 #loginModal hr {
-  background-color: #000;
+  background-color: #AAAAAA;
   height: 1px;
   border: 0px;
 }
@@ -530,7 +748,6 @@ button#play-footer-video-modal:focus {
 #footer-background-image {
   width: 100%;
   height: auto;
-  ;
 }
 
 #footer-image-overlay {
@@ -668,7 +885,10 @@ button#play-footer-video-modal:focus {
   .desktop-bar {
     display: none;
   }
-
+  .desktop-tablet-only
+  {
+  display: none !important;
+  }
   .navbar-default .navbar-collapse,
   .navbar-default .navbar-form {
     background-color: #fff;
@@ -680,14 +900,26 @@ button#play-footer-video-modal:focus {
     padding-top: 20px;
     padding-bottom: 20px;
   }
-
+/*
   .request-quote-nav-cta {
     margin-top: 0px;
     margin-bottom: 15px;
     margin-right: 0px;
     width: 100%;
   }
-
+*/
+  .request-quote-nav-cta {
+    margin-top: 0px;
+    /* margin-bottom: 15px; */
+    margin-right: 0px;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    border: 0px;
+    border-radius: 0px;
+    padding: 15px;
+  }
   #mrcgo-footer .social-icons {
     padding-left: 0px;
   }
@@ -703,6 +935,7 @@ button#play-footer-video-modal:focus {
 
   .container-fluid>.navbar-header {
     border-bottom: 1px solid #AAAAAA;
+    background-color: #fff;
   }
 
   .request-quote-mobile {
@@ -734,6 +967,24 @@ button#play-footer-video-modal:focus {
     height: 275px;
   }
 
+  .customer-shopping-cart a span,
+  .customer-information a span,
+  .customer-branch a span
+  {
+    font-size: 10px;
+  }
+  a.logout-icon span
+  {
+    margin-top: -10px;
+  }
+  .customer-branch a span
+  {
+    margin-top: 10px;
+  }
+  .dropdown-menu .dropdown-submenu
+  {
+    width: 430px;
+  }
   #mrcgo-banner #message-container {
     max-width: 430px;
   }
@@ -751,13 +1002,11 @@ button#play-footer-video-modal:focus {
     left: -30%;
     top: -30%;
   }
-
   /* START CONTENT AREA STYLES */
   .headline-content-area {
     font-size: 22px;
 
   }
-
   .headline-content-area:after {
     max-width: 125px;
   }
@@ -818,9 +1067,12 @@ button#play-footer-video-modal:focus {
   }
 
   .mobile-view-items {
-    display: none;
+    display: none !important;
   }
-
+  .menu-icons-mobile
+  {
+    display: none !important;
+  }
 }
 
 @media (max-width: 426px) {
@@ -830,12 +1082,136 @@ button#play-footer-video-modal:focus {
     display: block;
     background-color: #000;
     position: absolute;
-    bottom: -190px;
+    bottom: -300px;
     z-index: -1;
     height: 100%;
     width: 100%;
     opacity: 0.6;
     left: 0px;
+  }
+    /* START CSS FOR SUB-MENU ITEMS - JQUERY ACCORDION */
+  #products-sub-item-accordion h3
+  {
+    color: #2D5F71;
+    padding: 12px 15px 12px 25px;
+    line-height: 20px;
+    border-bottom: 1px solid #EBEBEB;
+    border-top: 0px;
+    background-color: transparent;
+    border-radius: 0px;
+    border-left: 0px;
+    border-right: 0px;
+  }
+  #products-sub-item-accordion .ui-accordion-content
+  {
+    padding: 0px;
+  }
+  #products-sub-item-accordion ul
+  {
+    padding: 0px;
+  }
+  #products-sub-item-accordion ul li
+  {
+    list-style: none;
+    padding: 10px 0px 10px 40px;
+  }
+    /* END CSS FOR SUB-MENU ITEMS - JQUERY ACCORDION */
+
+  .mobile-view-items span.light 
+  {
+      font-weight: 100;
+  }
+  .navbar-default .navbar-collapse,
+  .navbar-default .navbar-form {
+    padding-bottom: 100px;
+  }
+  .navbar-nav .open .dropdown-menu
+  {
+    padding: 0px;
+  }
+  .dropdown-menu li 
+  {
+    padding: 8px 0px;
+    border-bottom: 1px solid #EBEBEB;
+  }
+  .dropdown-menu li:last-child
+  {
+    border-bottom: 0px;
+  }
+  .menu-icons-mobile
+  {
+    color: #2D5F71;
+    font-size: 21px;
+    margin-right: 15px;
+    width: 30px;
+    text-align: center;
+  }
+  .flag-display-mobile {
+    background-image: url(../images/icons/us.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    width: 30px;
+    height: 17px;
+    display: block;
+    float: left;
+    margin-right: 15px;
+    box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
+    background-size: 100%;
+  }
+  .flag-us-mobile {
+    background-image: url(../images/icons/us.png);
+  }
+  .flag-au-mobile {
+    background-image: url(../images/icons/au.png);
+  }
+  .flag-be-mobile {
+    background-image: url(../images/icons/be.png);
+  }
+  .flag-ca-mobile {
+    background-image: url(../images/icons/ca.png);
+  }
+  .flag-fi-mobile {
+    background-image: url(../images/icons/fi.png);
+  }
+  .flag-fr-mobile {
+    background-image: url(../images/icons/fr.png);
+  }
+  .flag-de-mobile {
+    background-image: url(../images/icons/de.png);
+  }
+  .flag-gb-mobile {
+    background-image: url(../images/icons/gb.png);
+  }
+  .flag-sa-mobile {
+    background-image: url(../images/icons/sa.png);
+  }
+  .flag-nl-mobile {
+    background-image: url(../images/icons/nl.png);
+  }
+  .flag-nz-mobile {
+    background-image: url(../images/icons/nz.png);
+  }
+  .flag-no-mobile {
+    background-image: url(../images/icons/no.png);
+  }
+  .flag-sg-mobile {
+    background-image: url(../images/icons/sg.png);
+  }
+  .flag-ae-mobile {
+    background-image: url(../images/icons/ae.png);
+  }
+  span.caret.menu-link
+  {
+    transform: rotate(270deg);
+  }
+  /* TRANSFORM CARET WHEN MENU IS EXPANDED */
+  .nav-item.dropdown.open span.caret,
+  .dropdown.open span.caret
+  {
+    transform: rotate(180deg);
+  }
+  .request-quote-nav-cta {
+    margin-top: 15px;
   }
 
   #mrcgo-banner #message-container {
@@ -883,6 +1259,39 @@ button#play-footer-video-modal:focus {
 
   /* END CONTENT AREA STYLES */
 
+  #loginModal .col-xs-6
+  {
+    width: 100%;
+  }
+  #loginModal .btn-primary
+  {
+    margin-top: 5px;
+    margin-bottom: 0px;
+  }
+  #loginModal .forgot-password-link
+  {
+    width: 100%;
+    text-align: center;
+    margin: 10px 0px 10px 0px;
+    padding: 10px;
+    border: 1px solid #215263;
+    border-radius: 5px;
+  }
+  #loginModal .ms-signin 
+  {
+    max-width: 180px;
+}
+#loginModal .single-sign-in-text {
+  font-weight: 600;
+}
+#loginModal .register-link {
+  font-size: 13px;
+  text-align: center;
+  width: 160px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
   #footer-video-container {
     height: 300px;
   }
@@ -945,6 +1354,81 @@ button#play-footer-video-modal:focus {
   }
 
 }
+
+/* START MRCGO SPINNER/LOADING SCREEN */
+
+.loading-screen-container
+{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999999;
+  margin-top: 15em;
+}
+.loading-spinner-wrap
+{
+  position: relative;
+  width: 130px;
+  height: auto;
+  z-index: 9999999;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 8px rgb(0 0 0 / 25%);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* START SPINNER  */
+.spinner-mrcgo {
+  width: 60px;
+  height: 60px;
+  animation: spin-mrcgo-hexagon 0.9s linear infinite;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 9999999;
+}
+.spinner-mrcgo img {
+  width: 60px;
+  height: 60px;
+}
+
+@keyframes spin-mrcgo-hexagon {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+/* END SPINNER */
+
+.loading-message
+{
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 9999999;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  text-shadow: 2px 2px 8px #fff;
+  color: #635F60;
+}
+.loading-overlay
+{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999998;
+  background: #FFF;
+  opacity: .6;
+}
+/* END MRCGO SPINNER/LOADING SCREEN */
 
 @media (max-width: 376px) {
 

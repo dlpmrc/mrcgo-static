@@ -1,0 +1,322 @@
+/* STYLES FOR SLIDER/CAROUSEL */
+
+body#slider {
+  padding-top: 0px;
+}
+
+/* Special class on .container surrounding .navbar, used for positioning it into place. */
+.navbar-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 20;
+}
+
+/* Flip around the padding for proper display in narrow viewports */
+.navbar-wrapper>.container {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.navbar-wrapper .navbar {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.navbar-wrapper .navbar .container {
+  width: auto;
+}
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  height: 500px;
+  margin-bottom: 60px;
+  background-color: #000;
+}
+
+.carousel-caption {
+  z-index: 10;
+  /* Since positioning the image, we need to help out the caption */
+  padding: 25px;
+  /* right: 47%;
+  left: 6%;
+  top: 4%;
+  bottom: 4%;*/
+}
+
+.carousel-content {
+  z-index: 1;
+  position: relative;
+}
+
+.carousel-caption-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.5;
+  z-index: 0;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  height: 500px;
+  background-color: #777;
+}
+
+.carousel-content {
+  text-align: left;
+}
+
+.carousel-content h1.headline {
+  font-size: 36px;
+  font-weight: 600;
+  margin-top: 0px;
+}
+
+.carousel-content .headline:after {
+  content: "";
+  background-color: #CD2028;
+  display: block;
+  max-width: 155px;
+  height: 7px;
+  margin-top: 10px;
+}
+
+.carousel-content .contact-info p {
+  margin-bottom: 0px;
+}
+
+.carousel-content .contact-info p span {
+  font-weight: 600;
+}
+
+.carousel-content .contact-info p a {
+  color: #fff;
+}
+
+.carousel-inner>.item>img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.image-slide-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 1;
+  opacity: 0.35;
+}
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.marketing h2 {
+  font-weight: 400;
+}
+
+.marketing .col-lg-4 p {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+  margin: 80px 0;
+  /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media only screen and (max-width: 2560px) {
+
+  #mrcgoSlider .carousel-caption {
+    left: 6%;
+    right: 40%;
+    top: 5%;
+    height: 32em;
+  }
+
+  #mrcgoSlider .carousel-caption.right {
+    right: 6%;
+    left: 40%;
+  }
+
+  .carousel-content h1.headline {
+    font-size: 36px;
+  }
+
+  .carousel-caption p {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+
+
+  .carousel-content h1.headline {
+    font-size: 36px;
+  }
+
+  .carousel-caption p {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .carousel-content h1.headline {
+    font-size: 26px;
+  }
+
+  .carousel-caption p {
+    font-size: 13px;
+  }
+
+  .carousel-inner>.item>img {
+    height: 100%;
+  }
+}
+
+@media only screen and (max-width: 426px) {
+
+  #mrcgoSlider .carousel-caption,
+  #mrcgoSlider .carousel-caption.right {
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    height: 32em;
+  }
+
+  .carousel-control .glyphicon-chevron-right,
+  .carousel-control .glyphicon-chevron-left {
+    top: 120px;
+    margin-top: 0px;
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+
+  .carousel-indicators {
+    bottom: 440px;
+  }
+
+  .carousel-indicators li {
+    background-color: transparent;
+    border: 1px solid #fff;
+  }
+
+  .carousel-indicators .active {
+    background-color: #fff;
+  }
+
+  .carousel-content .headline:after {
+    max-width: 100px;
+  }
+
+  .carousel-caption-overlay {
+    opacity: 0.4;
+  }
+
+  /*
+.carousel-inner > .item > img {
+
+  left: -40%;
+  min-width: 800px;
+}*/
+  .carousel {
+    height: 690px;
+    background-color: #000;
+  }
+
+  .carousel .item {
+    height: 440px;
+    background-color: #635F60;
+    margin-top: 250px;
+  }
+
+  .carousel-inner>.item>img {
+    height: 250px;
+    margin-top: -250px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .carousel-content h1.headline {
+    font-size: 22px;
+  }
+
+  .carousel-caption p {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 768px) {
+
+  /* Navbar positioning foo */
+  .navbar-wrapper {
+    margin-top: 20px;
+  }
+
+  .navbar-wrapper .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .navbar-wrapper .navbar {
+    padding-right: 0;
+    padding-left: 0;
+    border-radius: 4px;
+    /* The navbar becomes detached from the top, so we round the corners */
+  }
+
+  .carousel-caption {
+    right: 20%;
+    left: 20%;
+  }
+
+  .carousel-content .headline:after {
+    max-width: 85px;
+  }
+
+  /* Bump up size of carousel content */
+  .carousel-caption p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 992px) {
+  .featurette-heading {
+    margin-top: 120px;
+  }
+}

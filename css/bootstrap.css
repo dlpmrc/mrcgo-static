@@ -3992,8 +3992,8 @@ fieldset[disabled] .btn-default.focus {
 .btn-primary:focus,
 .btn-primary.focus {
   color: #fff;
-  background-color: #286090;
-  border-color: #122b40;
+  background-color: #215263;
+  border-color: #306679;
 }
 
 .btn-primary:hover {
@@ -4022,8 +4022,8 @@ fieldset[disabled] .btn-default.focus {
 .btn-primary.active.focus,
 .open>.dropdown-toggle.btn-primary.focus {
   color: #fff;
-  background-color: #204d74;
-  border-color: #122b40;
+  background-color: #2D5F71;
+  border-color: #215263;
 }
 
 .btn-primary.disabled:hover,
@@ -5266,7 +5266,7 @@ select[multiple].input-group-sm>.input-group-btn>.btn {
 
 .navbar-fixed-top .navbar-collapse,
 .navbar-fixed-bottom .navbar-collapse {
-  max-height: 340px;
+  max-height: 530px;
 }
 
 @media (max-device-width: 480px) and (orientation: landscape) {
@@ -5351,11 +5351,13 @@ select[multiple].input-group-sm>.input-group-btn>.btn {
   }
 }
 
+/* UPDATED HAMBURGER MENU'S POSITION - LEFT ALIGNED */
 .navbar-toggle {
   position: relative;
-  float: right;
+  float: left;
   padding: 9px 10px;
-  margin-right: 15px;
+  margin-right: 5px;
+  margin-left: 15px;
   margin-top: 8px;
   margin-bottom: 8px;
   background-color: transparent;
@@ -5366,6 +5368,7 @@ select[multiple].input-group-sm>.input-group-btn>.btn {
 
 .navbar-toggle:focus {
   outline: 0;
+  background-color: #ddd;
 }
 
 .navbar-toggle .icon-bar {
@@ -5650,7 +5653,7 @@ select[multiple].input-group-sm>.input-group-btn>.btn {
 
   .navbar-default .navbar-nav .open .dropdown-menu>li>a:hover,
   .navbar-default .navbar-nav .open .dropdown-menu>li>a:focus {
-    color: #333;
+    color: #635F60;
     background-color: transparent;
   }
 
@@ -5701,7 +5704,7 @@ select[multiple].input-group-sm>.input-group-btn>.btn {
 
 .navbar-default .btn-link:hover,
 .navbar-default .btn-link:focus {
-  color: #333;
+  color: #635F60;
 }
 
 .navbar-default .btn-link[disabled]:hover,
@@ -7772,14 +7775,14 @@ button.close {
   top: 0;
   bottom: 0;
   left: 0;
-  width: 15%;
+  width: 5%;
   font-size: 20px;
   color: #fff;
   text-align: center;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
   background-color: rgba(0, 0, 0, 0);
   filter: alpha(opacity=50);
-  opacity: 0.5;
+  opacity: 0.9;
 }
 
 .carousel-control.left {
@@ -7808,7 +7811,7 @@ button.close {
   text-decoration: none;
   outline: 0;
   filter: alpha(opacity=90);
-  opacity: 0.9;
+  opacity: 0.5;
 }
 
 .carousel-control .icon-prev,
@@ -7852,7 +7855,7 @@ button.close {
 
 .carousel-indicators {
   position: absolute;
-  bottom: 10px;
+  bottom: -50px;
   left: 50%;
   z-index: 15;
   width: 60%;
@@ -7869,9 +7872,8 @@ button.close {
   margin: 1px;
   text-indent: -999px;
   cursor: pointer;
-  background-color: #000 \9;
-  background-color: rgba(0, 0, 0, 0);
-  border: 1px solid #fff;
+  background-color: #AAAAAA;
+  border: 1px solid #AAAAAA;
   border-radius: 10px;
 }
 
@@ -7879,13 +7881,13 @@ button.close {
   width: 12px;
   height: 12px;
   margin: 0;
-  background-color: #fff;
+  background-color: #000;
 }
 
 .carousel-caption {
   position: absolute;
   right: 15%;
-  bottom: 20px;
+  top: 10%;
   left: 15%;
   z-index: 10;
   padding-top: 20px;
@@ -7928,7 +7930,7 @@ button.close {
   }
 
   .carousel-indicators {
-    bottom: 20px;
+    bottom: -50px;
   }
 }
 
