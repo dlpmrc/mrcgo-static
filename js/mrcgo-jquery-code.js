@@ -36,6 +36,12 @@ $(function () {
 });
 // END LOGIN MODAL
 
+// START LOADING EXPERIENCE / SPINNER
+setTimeout(function () {
+  $(".loading-screen-container").hide()
+}, 3000);
+// END LOADING EXPERIENCE / SPINNER
+
 // START JS TO MAKE MODAL FLUID/RESPOSIVE
 // on window resize run function
 $(window).resize(function () {
