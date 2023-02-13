@@ -23,6 +23,10 @@
   <link href="./css/mrcgo-theme.css" rel="stylesheet">
   <!-- END MRCGO STATIC SITE CSS STYLES -->
 
+  <!-- START FONT AWESOME ICONOGRAPHY -->
+  <script src="https://kit.fontawesome.com/9a5ae4dd81.js" crossorigin="anonymous"></script>
+  <!-- END FONT AWESOME ICONOGRAPHY -->
+
   <script src="./js/ie-emulation-modes-warning.js"></script>
 
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -34,10 +38,21 @@
   <!-- START JQUERY CSS DEPENDENCIES -->
   <link rel="stylesheet" href="./css/jquery-ui.css">
   <!-- END JQUERY CSS DEPENDENCIES -->
-
 </head>
 
 <body>
+
+  <!-- START LOADING EXPERINCE / SPINNER -->
+  <div class="loading-screen-container">
+    <div class="loading-spinner-wrap">
+
+      <div class="spinner-mrcgo"><img src="./images/mrcgo-spinner.png"></div>
+
+      <div class="loading-message">Loading...</div>
+    </div>
+    <div class="loading-overlay"><!-- SPINNER --></div>
+  </div>
+  <!-- END LOADING EXPERINCE / SPINNER -->
 
   <!-- START FIXED NAVBAR -->
   <nav class="navbar navbar-default navbar-fixed-top">
@@ -46,13 +61,12 @@
 
       <div class="row">
         <div class="col-xs-6 col-sm-3">
-          <a class="navbar-brand mrcgo-logo-desktop" href="#"><span class="sr-only">MRCGO Logo</span> </a>
+          <a class="navbar-brand mrcgo-logo-desktop" href="./index.html"><span class="sr-only">MRCGO Logo</span> </a>
         </div>
         <!-- END LOGO -->
         <div class="col-xs-6 col-sm-5 padding-top-10">
           <div class="input-group">
-            <input type="text" class="form-control mrcgo-search"
-              placeholder="Search by keyword, product name, product number...">
+            <input type="text" class="form-control mrcgo-search" placeholder="Search Catalog...">
             <span class="input-group-btn">
               <button id="top-search-icon" class="btn btn-default" type="button"><span
                   class="glyphicon glyphicon-search" aria-hidden="true"><span
@@ -125,81 +139,429 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand mrcgo-logo-mobile" href="#"><span class="sr-only">MRCGO Logo</span> </a>
+        <a class="navbar-brand mrcgo-logo-mobile" href="./index.html"><span class="sr-only">MRCGO Logo</span> </a>
+
+
+        <!-- START MOBILE SEARCH EXPAND/COLLAPSE  -->
+        <div class="search-container">
+
+          <div class="search-header">
+
+            <div class="search-toggle mobile-view-items">
+              <button id="top-search-icon-mobile" class="btn btn-default" type="button">
+                <span>
+                  <i class="fa-solid fa-magnifying-glass"><span class="sr-only">Search</span></i>
+                </span>
+
+              </button>
+            </div>
+
+          </div>
+
+
+          <div class="search-content">
+
+            <!-- START MOBILE SEARCH -->
+            <div class="input-group">
+              <input type="text" class="form-control mrcgo-search" placeholder="Search Catalog...">
+              <span class="input-group-btn">
+                <button id="top-search-icon" class="btn btn-default" type="button"><span
+                    class="glyphicon glyphicon-search" aria-hidden="true"><span
+                      class="sr-only">Search</span></span></button>
+              </span>
+            </div>
+
+
+
+            <!-- END SEARCH -->
+          </div>
+        </div>
+        <!-- END MOBILE SEARCH EXPAND/COLLAPSE  -->
+
       </div>
       <!-- START MOBILE NAV -->
       <div id="navbar" class="navbar-collapse collapse">
 
-        <div class=" mobile-view-items">
-
-          <div class="top-icons-container">
-            <a class="flag-english-us-icon" href="#"><span class="sr-only">English (Change Language)</span> </a>
-            <a class="shopping-cart-icon" href="#"><span class="sr-only">View Shopping Cart</span> </a>
-            <a class="login-icon" href="#"><span class="sr-only">User Icon</span>Login </a>
-          </div>
-          <!-- END ICONS -->
-
-          <!-- START MOBILE SEARCH -->
-          <div class="input-group">
-            <input type="text" class="form-control mrcgo-search"
-              placeholder="Search by keyword, product name, product number...">
-            <span class="input-group-btn">
-              <button id="top-search-icon" class="btn btn-default" type="button"><span
-                  class="glyphicon glyphicon-search" aria-hidden="true"><span
-                    class="sr-only">Search</span></span></button>
-            </span>
-          </div>
-          <!-- END SEARCH -->
-
-        </div><!-- END MOBILE VIEW ITEMS -->
 
         <ul class="nav navbar-nav">
+
           <!-- Dropdown -->
           <li class="nav-item dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-              aria-expanded="false">Products <span class="caret"></span></a>
+              aria-expanded="false"><i class="fa-solid fa-wrench menu-icons-mobile"></i>Products <span
+                class="caret"></span></a>
+
+
 
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <li>
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                  aria-expanded="false">Valves, Actuators & Accessories
+
+              <!-- START ACCORDION -->
+              <div id="products-sub-item-accordion" class="mobile-view-items">
+                <h3>Valves, Actuators & Accessories</h3>
+                <div>
+                  <ul>
+                    <li>
+                      <a class="dropdown-item" href="#">Additional Gate Valves</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Additional Globe Valves</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Additional Check Valves</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Additional Ball Valves</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Additional Plug Valves</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Additional Valves</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Additional Valve Caps</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Actuator Parts &amp; Accessories</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Ball Valves</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Butterfly Valves</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Check Valves</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Diaphragm Valves</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Diaphragms</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Gate Valves</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Globe Valves</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Plug Valves</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Solenoid Valves</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Relief Valves</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Motor Valves</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Manual Operators</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Packing Accessories</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Parts And Accessories</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Electrical Actuators</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Pneumatic Actuators</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Other Solenoid Valves</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Other Parts and Accessories</a>
+                    </li>
+                  </ul>
+                </div>
+                <h3>Fittings</h3>
+                <div>
+                  <ul>
+                    <li>
+                      <a href="#">Submenu Item</a>
+                    </li>
+                    <li>
+                      <a href=" #">Submenu Item</a>
+                    </li>
+                    <li>
+                      <a href="#">Submenu Item</a>
+                    </li>
+                  </ul>
+                </div>
+                <h3>Flanges</h3>
+                <div>
+                  <ul>
+                    <li>
+                      <a href=" #">Submenu Item</a>
+                    </li>
+                    <li>
+                      <a href="#">Submenu Item</a>
+                    </li>
+                    <li>
+                      <a href="#">Submenu Item</a>>
+                    </li>
+                  </ul>
+                </div>
+                <h3>Gas Products and Polyethylene Pipe</h3>
+                <div>
+                  <ul>
+                    <li>
+                      <a href="#">Submenu Item</a>
+                    </li>
+                    <li>
+                      <a href="#">Submenu Item</a>
+                    </li>
+                    <li>
+                      <a href="#">Submenu Item</a>
+                    </li>
+                  </ul>
+                </div>
+                <h3>Instrumentation & Measurement</h3>
+                <div>
+                  <ul>
+                    <li>
+                      <a href="#">Submenu Item</a>
+                    </li>
+                    <li>
+                      <a href="#">Submenu Item</a>
+                    </li>
+                    <li>
+                      <a href="#">Submenu Item</a>
+                    </li>
+                  </ul>
+                </div>
+                <h3>Steam Traps & Strainers</h3>
+                <div>
+                  <ul>
+                    <li>
+                      <a href="#">Submenu Item</a>
+                    </li>
+                    <li>
+                      <a href="#">Submenu Item</a>
+                    </li>
+                    <li>
+                      <a href="#">Submenu Item</a>
+                    </li>
+                  </ul>
+                </div>
+                <h3>General Supplies</h3>
+                <div>
+                  <ul>
+                    <li>
+                      <a href="#">Submenu Item</a>
+                    </li>
+                    <li>
+                      <a href="#">Submenu Item</a>
+                    </li>
+                    <li>
+                      <a href="#">Submenu Item</a>
+                    </li>
+                  </ul>
+                </div>
+                <h3>Pipe</h3>
+                <div>
+                  <ul>
+                    <li>
+                      <a href="#">Submenu Item</a>
+                    </li>
+                    <li>
+                      <a href="#">Submenu Item</a>
+                    </li>
+                    <li>
+                      <a href="#">Submenu Item</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- END ACCORDION -->
+
+
+              <li class="desktop-tablet-only">
+                <a class="dropdown-item" href="#">
+                  Valves, Actuators & Accessories
                 </a>
+                <ul class="dropdown-menu dropdown-submenu">
+                  <li>
+                    <a class="dropdown-item" href="#">Submenu item 1</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Submenu item 2</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Submenu item 3 </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Submenu item 4</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Submenu item 5</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Submenu item 6</a>
+                  </li>
+                </ul>
               </li>
               <!-- END Valves, Actuators & Accessories PRODUCTS -->
-              <li>
+              <li class="desktop-tablet-only">
                 <a class="dropdown-item" href="#">
-                  Fittings 
+                  Fittings
                 </a>
+                <ul class="dropdown-menu dropdown-submenu">
+                  <li>
+                    <a class="dropdown-item" href="#">Submenu item 1</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Submenu item 2</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Submenu item 3 </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Submenu item 4</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Submenu item 5</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Submenu item 6</a>
+                  </li>
+                </ul>
               </li>
               <!-- END Fittings PRODUCTS -->
-              <li>
+              <li class="desktop-tablet-only">
                 <a class="dropdown-item" href="#">
-                  Flanges 
+                  Flanges
                 </a>
+                <ul class="dropdown-menu dropdown-submenu">
+                  <li>
+                    <a class="dropdown-item" href="#">Submenu item 1</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Submenu item 2</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Submenu item 3 </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Submenu item 4</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Submenu item 5</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Submenu item 6</a>
+                  </li>
+                </ul>
               </li>
               <!-- END Flanges PRODUCTS -->
-              <li>
+              <li class="desktop-tablet-only">
                 <a class="dropdown-item" href="#">
-                  Gas Products and Polyethylene Pipe 
+                  Gas Products and Polyethylene Pipe
                 </a>
+                <ul class="dropdown-menu dropdown-submenu">
+                  <li>
+                    <a class="dropdown-item" href="#">Submenu item 1</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Submenu item 2</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Submenu item 3 </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Submenu item 4</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Submenu item 5</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Submenu item 6</a>
+                  </li>
+                </ul>
               </li>
               <!-- END Gas Products and Polyethylene Pipe PRODUCTS -->
-              <li>
+              <li class="desktop-tablet-only">
                 <a class="dropdown-item" href="#">
-                  Instrumentation & Measurement 
+                  Instrumentation & Measurement
                 </a>
+                <ul class="dropdown-menu dropdown-submenu">
+                  <li>
+                    <a class="dropdown-item" href="#">Submenu item 1</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Submenu item 2</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Submenu item 3 </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Submenu item 4</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Submenu item 5</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Submenu item 6</a>
+                  </li>
+                </ul>
               </li>
               <!-- END Instrumentation & Measurement PRODUCTS -->
-              <li>
+              <li class="desktop-tablet-only">
                 <a class="dropdown-item" href="#">
-                  Steam Traps & Strainers 
+                  Steam Traps & Strainers
                 </a>
+                <ul class="dropdown-menu dropdown-submenu">
+                  <li>
+                    <a class="dropdown-item" href="#">Submenu item 1</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Submenu item 2</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Submenu item 3 </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Submenu item 4</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Submenu item 5</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Submenu item 6</a>
+                  </li>
+                </ul>
               </li>
               <!-- END Steam Traps & Strainers PRODUCTS -->
-              <li>
+              <li class="desktop-tablet-only">
                 <a class="dropdown-item" href="#">
                   General Supplies
                 </a>
+                <ul class="dropdown-menu dropdown-submenu">
+                  <li>
+                    <a class="dropdown-item" href="#">Submenu item 1</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Submenu item 2</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Submenu item 3 </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Submenu item 4</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Submenu item 5</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Submenu item 6</a>
+                  </li>
+                </ul>
               </li>
               <!-- END General Supplies PRODUCTS -->
             </ul>
@@ -207,7 +569,8 @@
           <!-- END Dropdown -->
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-              aria-expanded="false">Resources <span class="caret"></span></a>
+              aria-expanded="false"><i class="fa-solid fa-lightbulb menu-icons-mobile"></i>Resources <span
+                class="caret"></span></a>
             <ul class="dropdown-menu">
               <li><a href="#">Insight</a></li>
               <li><a href="#">eBrochures</a></li>
@@ -217,7 +580,8 @@
           <!-- END Dropdown -->
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-              aria-expanded="false">Orders <span class="caret"></span></a>
+              aria-expanded="false"><i class="fa-solid fa-box-open menu-icons-mobile"></i>Orders <span
+                class="caret"></span></a>
             <ul class="dropdown-menu">
               <li><a href="#">Quote Requests</a></li>
               <li><a href="#">Requisition Lists</a></li>
@@ -227,22 +591,59 @@
           <!-- END Dropdown -->
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-              aria-expanded="false">My Account <span class="caret"></span></a>
+              aria-expanded="false"><i class="fa-solid fa-gear menu-icons-mobile"></i>My Account <span
+                class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><a href="#">Mill Test Reports</a></li>
-              <li><a href="#">Invoices</a></li>
-              <li><a href="#">Proof of Delivery</a></li>
-              <li><a href="#">Order Tracking</a></li>
-              <li><a href="#">Order History</a></li>
-              <li><a href="#">Advanced Document Search</a></li>
-              <li><a href="#">Payments</a></li>
-              <li><a href="#">Branch Locator</a></li>
-              <li><a href="#">Case Management</a></li>
+              <li><a href="#" class="mobile-login-link">Mill Test Reports</a></li>
+              <li><a href="#" class="mobile-login-link">Invoices</a></li>
+              <li><a href="#" class="mobile-login-link">Proof of Delivery</a></li>
+              <li><a href="#" class="mobile-login-link">Order Tracking</a></li>
+              <li><a href="#" class="mobile-login-link">Order History</a></li>
+              <li><a href="#" class="mobile-login-link">Advanced Document Search</a></li>
+              <li><a href="#" class="mobile-login-link">Payments</a></li>
+              <li><a href="#" class="mobile-login-link">Branch Locator</a></li>
+              <li><a href="#" class="mobile-login-link">Case Management</a></li>
             </ul>
           </li>
           <!-- END Dropdown -->
 
+          <li class="dropdown mobile-view-items">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+              aria-expanded="false"><span class="flag-display-mobile flag-us-mobile"></span>United States<span
+                class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#"><span class="flag-display-mobile flag-ca-mobile"></span>Canada</a></li>
+              <li><a href="#"><span class="flag-display-mobile flag-gb-mobile"></span>United Kingdom</a></li>
+              <li><a href="#"><span class="flag-display-mobile flag-au-mobile"></span>Australia</a></li>
+              <li><a href="#"><span class="flag-display-mobile flag-be-mobile"></span>Belgium</a></li>
+              <li><a href="#"><span class="flag-display-mobile flag-fi-mobile"></span>Finland</a></li>
+              <li><a href="#"><span class="flag-display-mobile flag-fr-mobile"></span>France</a></li>
+              <li><a href="#"><span class="flag-display-mobile flag-de-mobile"></span>Germany</a></li>
+              <li><a href="#"><span class="flag-display-mobile flag-sa-mobile"></span>Kingdom of Saudi Arabia</a></li>
+              <li><a href="#"><span class="flag-display-mobile flag-nl-mobile"></span>Netherlands</a></li>
+              <li><a href="#"><span class="flag-display-mobile flag-nz-mobile"></span>New Zealand</a></li>
+              <li><a href="#"><span class="flag-display-mobile flag-no-mobile"></span>Norway</a></li>
+              <li><a href="#"><span class="flag-display-mobile flag-sg-mobile"></span>Singapore</a></li>
+              <li><a href="#"><span class="flag-display-mobile flag-ae-mobile"></span>United Arab Emirates</a></li>
+            </ul>
+          </li>
+          <!-- END Dropdown -->
+
+          <li class="dropdown mobile-view-items">
+            <a href="#" class="dropdown-toggle mobile-login-link" data-toggle="dropdown" role="button"
+              aria-haspopup="true" aria-expanded="false"><i
+                class="fa-solid fa-cart-shopping menu-icons-mobile"></i>Shopping Cart</a>
+          </li>
+          <!-- END Dropdown -->
+
+          <li class="dropdown mobile-view-items">
+            <a href="#" class="dropdown-toggle mobile-login-link" data-toggle="dropdown" role="button"
+              aria-haspopup="true" aria-expanded="false"><i class="fa-solid fa-user menu-icons-mobile"></i>Login</a>
+          </li>
+          <!-- END Dropdown -->
+
         </ul>
+
         <ul class="nav navbar-nav navbar-right request-quote-mobile">
           <a class="btn btn-primary request-quote-nav-cta" href="#" role="button">Request a Quote</a>
         </ul>
@@ -292,8 +693,7 @@
         </a>
       </div>
 
-      <!-- Add the extra clearfix for only the required viewport -->
-      <div class="clearfix visible-xs-block"></div>
+      <div class="clearfix visible-xs-block"><!-- CLEARFIX FOR MOBILE --></div>
 
       <div class="col-xs-6 col-sm-3">
         <a href="#" class="thumbnail">
@@ -510,7 +910,7 @@
     </div>
 
     <div class="row row-no-gutters">
-      <div class="col-xs-6"><button class="btn btn-primary" type="button">Login</button></div>
+      <div class="col-xs-6"><button id="login-button-cta" class="btn btn-primary" type="button">Login</button></div>
       <div class="col-xs-6"><a href="#" class="forgot-password-link">Forgot your password?</a></div>
     </div>
 
@@ -541,10 +941,14 @@
         <div class="container-fluid">
           <div class="row">
 
-            <video width="100%" height="100%" controls autoplay loop>
+            <!--<video width="100%" height="100%" controls="true" autoplay="true" name="media">
+              <source src="https://azurecdn.mrcglobal.com/videos/MRCGlobal_BD_220623_d12_wide.mp4" type="video/mp4">
+            </video>--->
+
+            <!--<video width="100%" height="100%" controls autoplay loop>
               <source src="https://azurecdn.mrcglobal.com/videos/MRCGlobal_BD_220623_d12_wide.mp4" type="video/mp4">
               Your browser does not support the video tag.
-            </video>
+            </video>-->
 
           </div>
         </div>
@@ -567,6 +971,7 @@
       <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
       <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
       <script src="./js/ie10-viewport-bug-workaround.js"></script>
+
 
 </body>
 
