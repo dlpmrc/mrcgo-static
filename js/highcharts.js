@@ -1,4 +1,3 @@
-// Data retrieved from https://netmarketshare.com/
 // Build the chart
 Highcharts.chart('user-pie-chart', {
   chart: {
