@@ -64,20 +64,29 @@ $(function () {
     autoOpen: false,
     //width: 600,
     width: '100%', // overcomes width:'auto' and maxWidth bug
-    maxWidth: 800,
-    height: '400',
+    //maxWidth: 800,
+    height: 'auto',
     modal: true,
     fluid: true, //new option
     resizable: false,
     draggable: false
   });
-  // SHOPING CART LINK ONCLICK HANDLER 
+  // FOOTER VIDEO LINK ONCLICK HANDLER 
   $("#play-footer-video-modal").click(function () {
     $("#footerVideoModal").dialog("open");
     return false;
   });
 });
 // END FOOTER VIDEO MODAL
+
+
+
+
+// START TABS
+$( function() {
+  $( "#tabs" ).tabs();
+} );
+// END TABS
 
 // START JS TO MAKE MODAL FLUID/RESPOSIVE
 // on window resize run function

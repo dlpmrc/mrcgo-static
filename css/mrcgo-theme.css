@@ -5,11 +5,53 @@
 body {
   padding-top: 130px;
 }
-/* JUST FOR DEMO */
-body.logged-in .headline-content-area
-{
-  padding-top: 15px;
+/* START MRCGO ALER STYLES */
+body#mrcgo-alert-on {
+  padding-top: 165px;
 }
+.mrcgo-alert
+{
+  display: none;
+}
+#mrcgo-alert-on .mrcgo-alert
+{
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 35px;
+  background-color: #2D5F71;
+  display: block;
+}
+.mrcgo-alert .container
+{
+  display: block;
+  max-width: 100%;
+  height: 35px;
+}
+.mrcgo-alert .carousel-caption
+{
+  padding: 0px;
+  left: 2%;
+  right: 2%;
+  padding-top: 3px;
+}
+.mrcgo-alert .carousel-caption .carousel-content
+{
+  height: auto;
+}
+.mrcgo-alert .carousel-control .glyphicon-chevron-right,
+.mrcgo-alert .carousel-control .glyphicon-chevron-left
+{
+  font-size: 16px;
+}
+.mrcgo-alert .carousel-control.right,
+.mrcgo-alert .carousel-control.left
+{
+  background-image: none;
+  background-color: transparent;
+}
+/* END MRCGO ALER STYLES */
+
 #mrcgo-nav-container {
   box-shadow: 0 4px 2px -2px grey;
 }
@@ -157,12 +199,92 @@ ul.sub-menu-list li {
   text-align: center;
 }
 /* END CSS FOR LOGGED IN NAV ITEMS */
-/* END CSS FOR SUB MENU DROPDOWN */
+
+/* START LOGGED IN STYLES */
+body.logged-in 
+{
+  padding-top: 175px;
+}
+.panel-icon
+{
+  color: #2D5F71;
+  margin-right: 2px;
+}
+.ui-tabs .ui-tabs-nav li.ui-tabs-active:first-child,
+.ui-tabs .ui-tabs-nav li.ui-tabs:first-child
+{
+  border-left: 1px solid #FFF;
+}
+body.logged-in #mrcgo-footer
+{
+margin-top: 45px;
+}
+body.logged-in .panel-body
+{
+  min-height: 100px;
+}
+.list-group-item .chevron-right
+{
+  float: right;
+  color: #AAAAAA;
+}
+#user-pie-chart {
+  height: 300px;
+  min-width: 200px;
+  max-width: 300px;
+}
+.highcharts-figure,
+.highcharts-data-table table {
+    min-width: 300px;
+    max-width: 320px;
+    margin: 1em auto;
+}
+
+.highcharts-data-table table {
+    font-family: Verdana, sans-serif;
+    border-collapse: collapse;
+    border: 1px solid #ebebeb;
+    margin: 10px auto;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+}
+
+.highcharts-data-table caption {
+    padding: 1em 0;
+    font-size: 1.2em;
+    color: #555;
+}
+
+.highcharts-data-table th {
+    font-weight: 600;
+    padding: 0.5em;
+}
+
+.highcharts-data-table td,
+.highcharts-data-table th,
+.highcharts-data-table caption {
+    padding: 0.5em;
+}
+
+.highcharts-data-table thead tr,
+.highcharts-data-table tr:nth-child(even) {
+    background: #f8f8f8;
+}
+
+.highcharts-data-table tr:hover {
+    background: #f1f7ff;
+}
+
+/* END LOGGED IN STYLES */
+
 .desktop-bar {
   width: 100%;
   background-color: #fff;
   padding-top: 15px;
   padding-bottom: 15px;
+  position: relative;
+  float: left;
 }
 
 .mrcgo-logo-desktop {
@@ -204,6 +326,8 @@ ul.sub-menu-list li {
   width: 40px;
   padding: 5px 5px;
   height: 35px;
+  color: #888 !important;
+  border-color: #ddd;
 }
 #top-search-icon-mobile.btn:focus {
   outline: 0;
@@ -296,8 +420,9 @@ ul.sub-menu-list li {
 /* END MOBILE MENU STYLES */
 
 #top-search-icon {
-  color: #fff;
+  color: #fff !important;
   background-color: #828081;
+  border: 1px solid #828181;
 }
 
 .top-icons-container {
@@ -396,6 +521,18 @@ ul.sub-menu-list li {
   box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
 }
 
+.flag-belgium-icon {
+  background-image: url(../images/icons/be.png) !important;
+  background-repeat: no-repeat;
+  background-position: left;
+  width: 40px;
+  height: 22px;
+  display: block;
+  float: left;
+  margin-right: 15px;
+  box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
+}
+
 .shopping-cart-icon {
   background-image: url(../images/icons/cart-icon.png);
   background-repeat: no-repeat;
@@ -426,24 +563,46 @@ ul.sub-menu-list li {
 .request-quote-nav-cta {
   margin-top: 10px;
   margin-right: 25px;
+  width: 130px;
 }
-
-
-
 
 /* START CUSTOM SPACING OPTIONS */
 .padding-top-5 {
   padding-top: 5px;
 }
-
 .padding-top-10 {
   padding-top: 10px;
 }
-
 .padding-top-15 {
   padding-top: 15px;
 }
-
+.padding-bottom-5 {
+  padding-bottom: 5px;
+}
+.padding-bottom-10 {
+  padding-bottom: 10px;
+}
+.padding-bottom-15 {
+  padding-bottom: 15px;
+}
+.padding-right-5 {
+  padding-right: 5px;
+}
+.padding-right-10 {
+  padding-right: 10px;
+}
+.padding-right-15 {
+  padding-right: 15px;
+}
+.padding-left-5 {
+  padding-left: 5px;
+}
+.padding-left-10 {
+  padding-left: 10px;
+}
+.padding-left-15 {
+  padding-left: 15px;
+}
 /* END CUSTOM SPACING OPTIONS */
 
 /* START LOGIN MODAL STYLES */
@@ -561,7 +720,8 @@ ul.sub-menu-list li {
 }
 
 #mrcgo-banner #headline {
-  font-size: 34px;
+  font-family: Oswald,sans-serif;
+  font-size: 44px;
   text-shadow: 2px 2px 8px rgb(0 0 0 / 75%);
   font-weight: 900;
   padding-bottom: 15px;
@@ -571,8 +731,11 @@ ul.sub-menu-list li {
   content: "";
   background-color: #CD2028;
   display: block;
-  max-width: 155px;
+  max-width: 108px;
   height: 7px;
+}
+#mrcgo-banner #headline span {
+  font-weight: 300;
 }
 
 #mrcgo-banner #sub-text {
@@ -695,6 +858,31 @@ ul.sub-menu-list li {
   height: 600px;
   margin-top: 50px;
 }
+#footer-video-container-fullscreen
+{
+  display: none;
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  top: 0;
+  left: 0;
+}
+#close-fullscreen-video
+{
+  z-index: 2147483647 !important;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+#footer-video-container video {
+  width: 100% !important;
+  min-width: 1200px;
+  height: auto !important;
+  background-color: #fff;
+  position: absolute;
+  top: -1%;
+}
 
 #footer-video-container #footer-message-container {
   position: absolute;
@@ -707,33 +895,39 @@ ul.sub-menu-list li {
 }
 
 #footer-video-message {
-  font-size: 34px;
+  font-family: Oswald,sans-serif;
+  font-size: 55px;
   text-shadow: 2px 2px 8px rgb(0 0 0 / 75%);
-  font-weight: 900;
+  font-weight: 600;
   padding-bottom: 15px;
   text-transform: uppercase;
-  max-width: 600px;
+  max-width: 520px;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 100px;
+}
+#footer-video-message sup {
+  font-weight: 100;
+  font-size: 27px;
 }
 
 #footer-video-message:after {
   content: "";
   background-color: #CD2028;
   display: block;
-  max-width: 155px;
+  max-width: 295px;
   height: 7px;
-  margin-left: 220px;
+  margin-left: 100px;
 }
 
 button#play-footer-video-modal {
   background-color: transparent;
   border: 0px;
-  font-size: 66px;
+  font-size: 60px;
   text-shadow: 2px 2px 8px rgb(0 0 0 / 75%);
   margin-top: 10px;
   opacity: 0.6;
-  color: #fff;
+  color: #fff !important;
 }
 
 button#play-footer-video-modal:hover {
@@ -869,10 +1063,24 @@ button#play-footer-video-modal:focus {
 
 /******** START MOBILE CSS MEDIA QUERIES ********/
 
+@media only screen and (min-width: 1024px) {
+
+  .thumbnail>img, .thumbnail a>img.product-item-image {
+    width: 60%;
+  }
+  img.sector-item-image
+  {
+    width: 100%;
+  }
+}
+
 @media (max-width: 1024px) {
 
   #footer-video-message {
-    font-size: 28px;
+    margin-top: 60px;
+    font-size: 55px;
+    max-width: 520px;
+
   }
 
 }
@@ -986,11 +1194,15 @@ button#play-footer-video-modal:focus {
     width: 430px;
   }
   #mrcgo-banner #message-container {
-    max-width: 430px;
+    max-width: 490px;
   }
 
   #mrcgo-banner #headline {
-    font-size: 24px;
+    font-size: 34px;
+  }
+  #mrcgo-banner #headline:after
+  {
+    max-width: 78px;
   }
 
   #mrcgo-banner #sub-text {
@@ -1042,16 +1254,26 @@ button#play-footer-video-modal:focus {
   #footer-video-container #footer-message-container {
     top: 4em;
   }
-
-  #footer-video-message {
-    font-size: 18px;
-    max-width: 375px;
-    padding-bottom: 0px;
+  #footer-video-container video {
+    width: 100% !important;
+    min-width: 750px;
   }
 
+  #footer-video-message {
+    font-size: 37px;
+    max-width: 340px;
+    padding-bottom: 0px;
+    margin-top: 20px;
+    
+  }
+  #footer-video-message sup {
+    font-size: 18px;
+  }
+  
+
   #footer-video-message:after {
-    max-width: 95px;
-    margin-left: 140px;
+    max-width: 195px;
+    margin-left: 65px;
 
   }
 
@@ -1076,19 +1298,102 @@ button#play-footer-video-modal:focus {
 }
 
 @media (max-width: 426px) {
-
-  /* Overlay for mobile menu */
-  #navbar:after {
-    display: block;
-    background-color: #000;
-    position: absolute;
-    bottom: -300px;
-    z-index: -1;
-    height: 100%;
-    width: 100%;
-    opacity: 0.6;
-    left: 0px;
+  body.logged-in 
+  {
+    padding-top: 75px;
   }
+
+  #mrcgo-banner #headline:after
+  {
+    max-width: 168px;
+  }
+  #mrcgo-banner #headline {
+    font-size: 28px;
+  }
+/* START MRCGO ALER STYLES */
+body#mrcgo-alert-on {
+  padding-top: 100px;
+}
+body#mrcgo-alert-on .search-container {
+  top: 100px;
+}
+#mrcgo-alert-on .mrcgo-alert
+{
+  height: 50px;
+}
+.mrcgo-alert .container
+{
+  height: 50px;
+}
+.mrcgo-alert .carousel-caption
+{
+  padding: 0px;
+  left: 5%;
+  right: 5%;
+  padding-top: 3px;
+  font-size: 12px;
+}
+.mrcgo-alert .carousel-control .glyphicon-chevron-right,
+.mrcgo-alert .carousel-control .glyphicon-chevron-left
+{
+  font-size: 14px;
+}
+.mrcgo-alert .carousel-control.right
+{
+padding-right: 35px;
+}
+.mrcgo-alert .carousel-control.left
+{
+padding-left: 35px;
+}
+/* END MRCGO ALER STYLES */
+
+  #quick-order-form .col-md-8
+  {
+    width: 80%;
+    float: left;
+  }
+  #quick-order-form .col-md-4
+  {
+    width: 20%;
+    float: left;
+  }
+  label {
+    font-size: 12px;
+}
+span.selected-language-label
+{
+  color: #828181;
+}
+span.change-language-label
+{
+  color: #828181;
+  font-size: 12px;
+  font-weight: 100;
+}
+.language-input-container
+{
+  width: 100%;
+  display: inline-block;
+  padding: 20px 15px 0px 10px;
+}
+.language-input
+{
+  width: 30%;
+  float: left;
+  display: block;
+  margin-right: 5px;
+}
+.language-input label
+{
+  font-size: 14px;
+}
+.language-input input[type="radio"]
+{
+  width: 14px;
+  height: 14px;
+  margin-right: 2px;
+}
     /* START CSS FOR SUB-MENU ITEMS - JQUERY ACCORDION */
   #products-sub-item-accordion h3
   {
@@ -1301,16 +1606,19 @@ button#play-footer-video-modal:focus {
   }
 
   #footer-video-message {
-    font-size: 16px;
-    max-width: 175px;
+    font-size: 33px;
+    max-width: 235px;
   }
 
   #footer-video-message:after {
-    max-width: 75px;
-    margin-left: 50px;
+    max-width: 180px;
+    margin-left: 20px;
 
   }
-
+  #footer-video-message sup {
+    font-size: 16px;
+  }
+  
   button#play-footer-video-modal {
     font-size: 35px;
     margin-top: 10px;
@@ -1470,6 +1778,20 @@ button#play-footer-video-modal:focus {
   #footer-video-container {
     height: 260px;
   }
+  #footer-video-message {
+    font-size: 27px;
+    max-width: 235px;
+  }
+
+  #footer-video-message:after {
+    max-width: 150px;
+    margin-left: 35px;
+
+  }
+  #footer-video-message sup {
+    font-size: 16px;
+  }
+
 }
 
 /******** END MOBILE CSS MEDIA QUERIES ********/
