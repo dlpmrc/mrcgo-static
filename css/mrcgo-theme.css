@@ -765,13 +765,20 @@ body.logged-in .panel-body
 
 /* END BANNER/VIDEO STYLES */
 
-/* START PRODUCTS/SECTORS HOME SECTION */
+
+/* START CATEGORY ICONS/SECTORS HOME SECTION */
 #products-and-sectors-container .thumbnail {
   border-radius: 0px;
   box-shadow: 2px 2px 8px rgb(0 0 0 / 25%);
   overflow: hidden;
 }
-
+.thumbnail>img, .thumbnail a>img.product-item-image {
+  width: 60%;
+}
+img.sector-item-image
+{
+  width: 100%;
+}
 .thumbnail-label {
   text-align: center;
   display: block;
@@ -1060,6 +1067,7 @@ button#play-footer-video-modal:focus {
 }
 
 /* END FOOTER STYLES */
+
 
 /******** START MOBILE CSS MEDIA QUERIES ********/
 
