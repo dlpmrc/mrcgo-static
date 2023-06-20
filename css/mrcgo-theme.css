@@ -721,7 +721,7 @@ body.logged-in .panel-body
 
 #mrcgo-banner #headline {
   font-family: Oswald,sans-serif;
-  font-size: 44px;
+  font-size: 38px;
   text-shadow: 2px 2px 8px rgb(0 0 0 / 75%);
   font-weight: 900;
   padding-bottom: 15px;
@@ -731,7 +731,7 @@ body.logged-in .panel-body
   content: "";
   background-color: #CD2028;
   display: block;
-  max-width: 108px;
+  max-width: 88px;
   height: 7px;
 }
 #mrcgo-banner #headline span {
@@ -1206,11 +1206,11 @@ button#play-footer-video-modal:focus {
   }
 
   #mrcgo-banner #headline {
-    font-size: 34px;
+    font-size: 30px;
   }
   #mrcgo-banner #headline:after
   {
-    max-width: 78px;
+    max-width: 68px;
   }
 
   #mrcgo-banner #sub-text {
