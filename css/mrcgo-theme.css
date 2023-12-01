@@ -744,7 +744,6 @@ body.logged-in .panel-body
 }
 
 #mrcgo-banner #headline {
-  font-family: Oswald,sans-serif;
   font-size: 38px;
   text-shadow: 2px 2px 8px rgb(0 0 0 / 75%);
   font-weight: 900;
